@@ -1,0 +1,498 @@
+<!doctype html>
+<!--
+  CONCEPT DEMONSTRATION SITE by Studio 72.
+  "Summit Roofing", its people, reviews, license numbers, and figures are fictional
+  and exist to demonstrate what a finished client site looks like.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Summit Roofing | Roof replacement and repair in Fairview County</title>
+<meta name="description" content="Summit Roofing replaces and repairs residential roofs across Fairview County. Free inspections and a 15-year workmanship warranty in writing.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23171a1f'/%3E%3Cpath d='M6 21 16 10l10 11' fill='none' stroke='%23b04a10' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f5f2;
+  --surface:#ffffff;
+  --ink:#171a1f;
+  --muted:#575c63;
+  --line:#e4e1da;
+  --accent:#b04a10;
+  --accent-deep:#933d0c;
+  --dark:#171a1f;
+  --dark-ink:#f2f0ec;
+  --dark-muted:#b9b5ac;
+  --r:10px;
+  --shadow:0 20px 50px -24px rgba(56,42,26,.35);
+  --wrap:1160px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  font-family:"Archivo",system-ui,-apple-system,sans-serif;
+  background:var(--bg);color:var(--ink);
+  line-height:1.6;font-size:16.5px;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+section{padding:clamp(64px,9vw,116px) 0}
+
+/* ---------- nav ---------- */
+header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(246,245,242,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.nav{display:flex;align-items:center;gap:28px;height:70px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:1.12rem;letter-spacing:-.01em}
+.brand svg{width:30px;height:30px;flex:none}
+.nav-links{display:flex;gap:26px;margin-left:auto;align-items:center}
+.nav-links a{text-decoration:none;font-weight:500;font-size:.95rem;color:var(--muted)}
+.nav-links a:hover{color:var(--ink)}
+.nav-phone{font-weight:700;color:var(--ink) !important}
+.btn{
+  display:inline-block;background:var(--accent);color:#fff;text-decoration:none;
+  font-weight:700;font-size:.98rem;padding:13px 24px;border-radius:var(--r);
+  border:none;cursor:pointer;font-family:inherit;
+  transition:background .2s,transform .15s;
+}
+.btn:hover{background:var(--accent-deep)}
+.btn:active{transform:translateY(1px) scale(.99)}
+.btn:focus-visible{outline:3px solid rgba(176,74,16,.4);outline-offset:2px}
+.btn-ghost{
+  background:transparent;color:var(--ink);border:1.5px solid var(--ink);
+}
+.btn-ghost:hover{background:var(--ink);color:var(--bg)}
+.menu-btn{display:none;margin-left:auto;background:none;border:1.5px solid var(--line);border-radius:8px;padding:9px 14px;font-family:inherit;font-weight:600;font-size:.9rem;cursor:pointer}
+
+/* ---------- hero ---------- */
+.hero{padding:clamp(48px,6vw,84px) 0 clamp(56px,7vw,96px)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,5vw,72px);align-items:center}
+.kicker{
+  display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--accent-deep);margin-bottom:18px;
+}
+h1{
+  font-size:clamp(2.4rem,5.2vw,3.9rem);line-height:1.04;letter-spacing:-.03em;
+  font-weight:800;margin-bottom:22px;text-wrap:balance;
+}
+.hero p{font-size:1.13rem;color:var(--muted);max-width:34rem;margin-bottom:32px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero-media{position:relative}
+.hero-media img{
+  width:100%;aspect-ratio:4/4.1;object-fit:cover;object-position:center 62%;
+  border-radius:var(--r);box-shadow:var(--shadow);
+}
+
+/* ---------- trust bar ---------- */
+.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface);padding:26px 0}
+.trust-row{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.trust-row div{font-size:.92rem;color:var(--muted);line-height:1.45}
+.trust-row strong{display:block;color:var(--ink);font-size:1rem;letter-spacing:-.01em}
+
+/* ---------- services bento ---------- */
+.sec-head{max-width:38rem;margin-bottom:clamp(36px,5vw,56px)}
+h2{font-size:clamp(1.8rem,3.4vw,2.6rem);letter-spacing:-.025em;line-height:1.1;font-weight:800;text-wrap:balance}
+.sec-head p{color:var(--muted);margin-top:14px;font-size:1.06rem}
+.bento{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+.tile{
+  border-radius:var(--r);overflow:hidden;position:relative;background:var(--surface);
+  border:1px solid var(--line);display:flex;flex-direction:column;min-height:340px;
+}
+.tile-img{grid-column:span 7}
+.tile-img.narrow{grid-column:span 5}
+.tile-img img{width:100%;height:230px;object-fit:cover}
+.tile-body{padding:22px 24px 26px;display:flex;flex-direction:column;gap:8px;flex:1}
+.tile h3{font-size:1.22rem;letter-spacing:-.015em;font-weight:700}
+.tile p{color:var(--muted);font-size:.97rem}
+.tile-dark{grid-column:span 5;background:var(--dark);border:none;color:var(--dark-ink);justify-content:flex-end;padding:26px 24px}
+.tile-dark h3{color:#fff;font-size:1.22rem;margin-top:10px}
+.tile-dark p{color:var(--dark-muted);font-size:.97rem;margin-top:8px}
+.tile-dark .big{font-size:2.6rem;font-weight:800;letter-spacing:-.03em;color:var(--accent);line-height:1}
+.tile-link{margin-top:auto;padding-top:12px;font-weight:700;font-size:.92rem;color:var(--accent-deep);text-decoration:none}
+.tile-link:hover{text-decoration:underline}
+
+/* ---------- process ---------- */
+.process{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.proc-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(36px,6vw,90px)}
+.proc-left h2{position:sticky;top:110px}
+.proc-step{padding:30px 0;display:grid;grid-template-columns:120px 1fr;gap:22px;align-items:start}
+.proc-step + .proc-step{border-top:1px solid var(--line)}
+.proc-step h3{font-size:1.5rem;font-weight:800;letter-spacing:-.02em;color:var(--accent-deep)}
+.proc-step p{color:var(--muted);font-size:1rem}
+
+/* ---------- projects ---------- */
+.proj-grid{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:18px;align-items:start}
+.proj figure{margin:0}
+.proj img{width:100%;border-radius:var(--r);object-fit:cover;height:340px}
+.proj-grid figure:first-child img{height:420px}
+.proj figcaption{margin-top:12px;font-size:.92rem;color:var(--muted)}
+.proj figcaption strong{color:var(--ink);display:block;font-size:.98rem}
+
+/* ---------- quote / testimonial ---------- */
+.quote{background:var(--bg)}
+.quote blockquote{
+  max-width:52rem;margin:0 auto;text-align:left;
+  font-size:clamp(1.3rem,2.6vw,1.8rem);line-height:1.4;letter-spacing:-.015em;font-weight:600;
+}
+.quote cite{display:block;margin-top:22px;font-style:normal;font-size:1rem;color:var(--muted);font-weight:500}
+
+/* ---------- warranty band ---------- */
+.band{background:var(--dark);color:var(--dark-ink)}
+.band-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:40px;align-items:center}
+.band h2{color:#fff}
+.band p{color:var(--dark-muted);margin-top:14px;max-width:34rem;font-size:1.05rem}
+.band .btn{justify-self:start}
+@media(min-width:861px){.band .btn{justify-self:end}}
+
+/* ---------- contact ---------- */
+.contact-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(36px,6vw,80px);align-items:start}
+.info-block{padding:22px 0;border-top:1px solid var(--line)}
+.info-block:first-of-type{border-top:none;padding-top:0}
+.info-block strong{display:block;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;font-weight:700}
+.info-block span{font-size:1.15rem;font-weight:600}
+.form-card{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  padding:clamp(24px,3.5vw,40px);box-shadow:var(--shadow);
+}
+.form-card h3{font-size:1.3rem;letter-spacing:-.015em;margin-bottom:20px}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;font-size:.93rem;margin-bottom:7px}
+.field input,.field select,.field textarea{
+  width:100%;padding:13px 14px;border:1.5px solid var(--line);border-radius:8px;
+  font-family:inherit;font-size:1rem;background:var(--bg);color:var(--ink);
+}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--accent);background:#fff}
+.field .hint{font-size:.83rem;color:var(--muted);margin-top:5px}
+.field .err{display:none;font-size:.85rem;color:#a3271d;margin-top:5px;font-weight:600}
+.field.invalid .err{display:block}
+.field.invalid input{border-color:#a3271d}
+.form-ok{display:none;text-align:center;padding:40px 10px}
+.form-ok h3{margin-bottom:10px}
+.form-ok p{color:var(--muted)}
+form.sent .form-fields{display:none}
+form.sent .form-ok{display:block}
+
+/* ---------- footer ---------- */
+footer{background:var(--dark);color:var(--dark-muted);padding:56px 0 40px;font-size:.94rem}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:36px;margin-bottom:40px}
+.foot-grid h4{color:#fff;font-size:1rem;margin-bottom:12px}
+footer a{color:var(--dark-muted);text-decoration:none}
+footer a:hover{color:#fff}
+.foot-links li{list-style:none;margin-bottom:8px}
+.foot-base{border-top:1px solid rgba(255,255,255,.12);padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.86rem}
+.foot-base a{color:var(--accent);font-weight:600}
+
+/* ---------- reveal ---------- */
+@media (prefers-reduced-motion:no-preference){
+  .rv{opacity:0;transform:translateY(20px)}
+  .rv.in{opacity:1;transform:none;transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+}
+
+/* ---------- mobile ---------- */
+@media(max-width:960px){
+  .hero-grid,.proc-grid,.band-grid,.contact-grid{grid-template-columns:1fr}
+  .hero-media img{aspect-ratio:16/11}
+  .trust-row{grid-template-columns:1fr 1fr;gap:22px}
+  .tile-img,.tile-img.narrow,.tile-dark{grid-column:span 12}
+  .proj-grid{grid-template-columns:1fr}
+  .proj img,.proj-grid figure:first-child img{height:280px}
+  .proc-left h2{position:static}
+  .foot-grid{grid-template-columns:1fr}
+}
+@media(max-width:860px){
+  .nav-links{
+    display:none;position:absolute;top:70px;left:0;right:0;
+    background:var(--surface);border-bottom:1px solid var(--line);
+    flex-direction:column;padding:22px 24px;gap:18px;align-items:flex-start;
+  }
+  .nav-links.open{display:flex}
+  .menu-btn{display:block}
+  .proc-step{grid-template-columns:1fr;gap:8px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Summit Roofing home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#171a1f"/><path d="M6 21 16 10l10 11" fill="none" stroke="#b04a10" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Summit Roofing
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="navlinks">Menu</button>
+    <nav class="nav-links" id="navlinks">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#projects">Projects</a>
+      <a class="nav-phone" href="tel:+15095550117">(509) 555-0117</a>
+      <a class="btn" href="#contact">Get a free quote</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero" aria-label="Introduction">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="kicker">Licensed &amp; insured roofing contractor</span>
+        <h1>A roof you won't think about for 30 years.</h1>
+        <p>Full replacements and repairs across Fairview County, with free inspections and a 15-year workmanship warranty in writing.</p>
+        <div class="hero-ctas">
+          <a class="btn" href="#contact">Get a free quote</a>
+          <a class="btn btn-ghost" href="#projects">See recent projects</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img src="assets/hero.jpg" alt="Classic two-story home with a full multi-gable shingle roof" width="1920" height="1280" fetchpriority="high">
+      </div>
+    </div>
+  </section>
+
+  <div class="trust" role="region" aria-label="Credentials">
+    <div class="wrap trust-row">
+      <div><strong>Licensed &amp; bonded</strong>WA lic. SUMMR*831KD</div>
+      <div><strong>15-year warranty</strong>Workmanship, in writing</div>
+      <div><strong>Certified installers</strong>Manufacturer-trained crews</div>
+      <div><strong>4.9 average</strong>212 homeowner reviews</div>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <h2>What we do</h2>
+        <p>One crew, one point of contact, from first inspection to final magnetic nail sweep.</p>
+      </div>
+      <div class="bento">
+        <article class="tile tile-img rv">
+          <img src="assets/replace.jpg" alt="Summit crew member tearing off old shingles on a brick home" width="1200" height="800" loading="lazy">
+          <div class="tile-body">
+            <h3>Full roof replacement</h3>
+            <p>Tear-off, deck repair, underlayment, and new architectural shingle or metal. Most homes take 2 to 3 days.</p>
+            <a class="tile-link" href="#contact">Get a free quote</a>
+          </div>
+        </article>
+        <article class="tile tile-img narrow rv">
+          <img src="assets/repair.jpg" alt="Roofer in safety harness inspecting an asphalt shingle roof" width="1200" height="800" loading="lazy">
+          <div class="tile-body">
+            <h3>Repairs &amp; leak response</h3>
+            <p>Flashing, valleys, vents, and storm-lifted shingles. We find the actual source, not just the stain.</p>
+            <a class="tile-link" href="#contact">Get a free quote</a>
+          </div>
+        </article>
+        <article class="tile tile-dark rv">
+          <div>
+            <span class="big">$0</span>
+            <h3>Storm damage &amp; insurance claims</h3>
+            <p>We document damage, meet your adjuster on site, and bill the insurer directly. You pay your deductible and nothing else.</p>
+          </div>
+        </article>
+        <article class="tile tile-img rv">
+          <img src="assets/newbuild.jpg" alt="New modern home with standing seam and flat roof sections at dusk" width="1200" height="800" loading="lazy">
+          <div class="tile-body">
+            <h3>New construction &amp; additions</h3>
+            <p>We work with your builder on new roofs, standing seam metal, and low-slope sections done to spec.</p>
+            <a class="tile-link" href="#contact">Get a free quote</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="process" id="process">
+    <div class="wrap proc-grid">
+      <div class="proc-left">
+        <h2 class="rv">How a Summit project runs</h2>
+      </div>
+      <div>
+        <div class="proc-step rv">
+          <h3>Inspect</h3>
+          <p>A 21-point inspection with photos of everything we find, usually within the week. Free, whether or not you hire us.</p>
+        </div>
+        <div class="proc-step rv">
+          <h3>Quote</h3>
+          <p>A fixed price with material options at three levels. It's valid for 60 days, and nobody will call you twice about it.</p>
+        </div>
+        <div class="proc-step rv">
+          <h3>Build</h3>
+          <p>Tear-off to cleanup in 2 to 3 days for most homes. Tarped landscaping, a magnetic sweep for nails, and a walkthrough with the crew lead before we leave.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <h2>Recent projects</h2>
+      </div>
+      <div class="proj proj-grid">
+        <figure class="rv">
+          <img src="assets/proj-1.jpg" alt="Gray architectural shingle roof at sunrise" width="1200" height="800" loading="lazy">
+          <figcaption><strong>Whole-roof replacement, Cedar Ridge Dr</strong>Architectural shingle over re-decked sheathing, 34 squares.</figcaption>
+        </figure>
+        <figure class="rv">
+          <img src="assets/proj-2.jpg" alt="Steep-pitch tile roof on a craftsman home at dusk" width="1200" height="800" loading="lazy">
+          <figcaption><strong>Steep-slope re-roof, Alder Creek</strong>Composite tile with new ridge venting.</figcaption>
+        </figure>
+        <figure class="rv">
+          <img src="assets/proj-3.jpg" alt="Modern home exterior with mixed flat and pitched roofing" width="1200" height="800" loading="lazy">
+          <figcaption><strong>New build, Harborview Estates</strong>Standing seam metal with a TPO flat section.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote">
+    <div class="wrap rv">
+      <blockquote>
+        "They tore off, re-decked, and finished in two days, and the yard was cleaner than they found it. The warranty paperwork showed up the same week."
+        <cite>Rosa Delgado, homeowner in Fairview</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap band-grid">
+      <div class="rv">
+        <h2>15 years. In writing.</h2>
+        <p>Every Summit roof comes with a transferable 15-year workmanship warranty on top of the manufacturer's material coverage. If our work fails, we fix it. No fine-print gymnastics.</p>
+      </div>
+      <a class="btn rv" href="#contact">Get a free quote</a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <h2 class="rv">Tell us about your roof</h2>
+        <p style="color:var(--muted);margin:16px 0 34px;max-width:30rem">Send the form or call. A real person answers weekdays 7am to 6pm, and we book inspections within the week.</p>
+        <div class="info-block rv">
+          <strong>Phone</strong>
+          <span><a href="tel:+15095550117" style="text-decoration:none">(509) 555-0117</a></span>
+        </div>
+        <div class="info-block rv">
+          <strong>Service area</strong>
+          <span>Fairview County and 30 miles around it</span>
+        </div>
+        <div class="info-block rv">
+          <strong>Office</strong>
+          <span>4172 Millbrook Rd, Fairview, WA</span>
+        </div>
+      </div>
+      <form class="form-card rv" novalidate>
+        <div class="form-fields">
+          <h3>Request your free inspection</h3>
+          <div class="field">
+            <label for="f-name">Your name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required>
+            <p class="err">Please add your name.</p>
+          </div>
+          <div class="field">
+            <label for="f-phone">Phone</label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel" required>
+            <p class="hint">We call once to schedule. No repeat calls, ever.</p>
+            <p class="err">Please add a phone number so we can schedule.</p>
+          </div>
+          <div class="field">
+            <label for="f-addr">Street address</label>
+            <input id="f-addr" name="address" type="text" autocomplete="street-address">
+            <p class="hint">Lets us check the roof on satellite before we visit.</p>
+          </div>
+          <div class="field">
+            <label for="f-need">What do you need?</label>
+            <select id="f-need" name="need">
+              <option>Full replacement</option>
+              <option>Repair or leak</option>
+              <option>Storm damage / insurance claim</option>
+              <option>New construction</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <button class="btn" type="submit" style="width:100%">Request my free inspection</button>
+        </div>
+        <div class="form-ok">
+          <h3>Got it. We'll call you within one business day.</h3>
+          <p>If the roof is actively leaking, call (509) 555-0117 now and we'll talk you through getting a tarp on it.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Summit Roofing</h4>
+        <p>Residential roof replacement and repair in Fairview County, Washington. Licensed, bonded, and insured. WA lic. SUMMR*831KD.</p>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul class="foot-links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul class="foot-links">
+          <li><a href="tel:+15095550117">(509) 555-0117</a></li>
+          <li>4172 Millbrook Rd</li>
+          <li>Fairview, WA</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>Fictional business shown for demonstration.</span>
+      <span>Website concept by <a href="../../index.html">Studio 72</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.querySelector('.menu-btn'),links=document.getElementById('navlinks');
+  btn.addEventListener('click',function(){
+    var open=links.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open);
+  });
+  links.addEventListener('click',function(e){if(e.target.tagName==='A'){links.classList.remove('open');btn.setAttribute('aria-expanded','false');}});
+
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
+    },{threshold:.15,rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+  }else{
+    document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in');});
+  }
+
+  var form=document.querySelector('form');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var ok=true;
+    ['f-name','f-phone'].forEach(function(id){
+      var input=document.getElementById(id),field=input.closest('.field');
+      if(!input.value.trim()){field.classList.add('invalid');ok=false;}
+      else field.classList.remove('invalid');
+    });
+    if(ok) form.classList.add('sent');
+  });
+})();
+</script>
+</body>
+</html>

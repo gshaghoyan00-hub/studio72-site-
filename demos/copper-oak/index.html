@@ -1,0 +1,325 @@
+<!doctype html>
+<!--
+  CONCEPT DEMONSTRATION SITE by Studio 72.
+  "Copper & Oak", its chef, menu, and prices are fictional and exist to demonstrate
+  what a finished client site looks like.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Copper &amp; Oak | Wood-fired dining in Riverside</title>
+<meta name="description" content="Copper &amp; Oak is a neighborhood dining room in Riverside. A short seasonal menu cooked over a wood hearth, a long wine list, and seats at the counter.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23131110'/%3E%3Cpath d='M8 24V10h4.5v14zM19.5 24V10H24v14z' fill='%23c78a52'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#141110;
+  --surface:#1d1917;
+  --ink:#efe8de;
+  --muted:#a99f92;
+  --line:#332d29;
+  --accent:#c78a52;
+  --accent-bright:#d89e66;
+  --wrap:1120px;
+  --serif:"Playfair Display",Georgia,serif;
+  --sans:"Hanken Grotesk",system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  font-family:var(--sans);background:var(--bg);color:var(--ink);
+  line-height:1.65;font-size:16.5px;-webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+section{padding:clamp(72px,10vw,128px) 0}
+
+/* ---------- nav ---------- */
+header{position:absolute;top:0;left:0;right:0;z-index:50}
+header.solid{position:sticky;background:rgba(20,17,16,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:28px;height:78px}
+.brand{text-decoration:none;font-family:var(--serif);font-weight:600;font-size:1.35rem;letter-spacing:.01em}
+.brand em{font-style:italic;color:var(--accent)}
+.nav-links{display:flex;gap:30px;margin-left:auto;align-items:center}
+.nav-links a{text-decoration:none;font-weight:500;font-size:.95rem;color:var(--ink);opacity:.85}
+.nav-links a:hover{opacity:1}
+.btn{
+  display:inline-block;background:var(--accent);color:#191411;text-decoration:none;
+  font-weight:700;font-size:.95rem;padding:13px 26px;border-radius:0;
+  border:none;cursor:pointer;font-family:var(--sans);letter-spacing:.02em;
+  transition:background .2s,transform .15s;
+}
+.btn:hover{background:var(--accent-bright)}
+.btn:active{transform:translateY(1px)}
+.btn:focus-visible{outline:3px solid rgba(199,138,82,.5);outline-offset:2px}
+.btn-ghost{background:transparent;color:var(--ink);border:1px solid rgba(239,232,222,.55)}
+.btn-ghost:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.menu-btn{display:none;margin-left:auto;background:rgba(20,17,16,.5);border:1px solid rgba(239,232,222,.4);color:var(--ink);padding:9px 16px;font-family:var(--sans);font-weight:600;font-size:.9rem;cursor:pointer}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;min-height:min(92dvh,880px);display:flex;align-items:flex-end;
+  padding:0 0 clamp(48px,7vw,84px);
+}
+.hero-bg{position:absolute;inset:0;overflow:hidden}
+.hero-bg img{width:100%;height:100%;object-fit:cover}
+.hero-bg::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(20,17,16,.96) 0%,rgba(20,17,16,.45) 45%,rgba(20,17,16,.25) 100%);
+}
+.hero-inner{position:relative;z-index:1;max-width:44rem}
+h1{
+  font-family:var(--serif);font-weight:600;
+  font-size:clamp(2.6rem,6vw,4.6rem);line-height:1.06;letter-spacing:-.01em;
+  margin-bottom:20px;text-wrap:balance;
+}
+.hero p{font-size:1.13rem;color:var(--ink);opacity:.85;max-width:36rem;margin-bottom:32px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+
+/* ---------- story ---------- */
+.story-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(36px,6vw,88px);align-items:center}
+h2{font-family:var(--serif);font-weight:600;font-size:clamp(1.9rem,3.8vw,2.8rem);letter-spacing:-.008em;line-height:1.12;text-wrap:balance}
+.story p{color:var(--muted);margin-top:18px;font-size:1.06rem;max-width:34rem}
+.story-grid img{width:100%;aspect-ratio:5/4;object-fit:cover}
+
+/* ---------- menu ---------- */
+.menu{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.menu-head{text-align:center;max-width:36rem;margin:0 auto clamp(40px,6vw,64px)}
+.kicker{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;font-family:var(--sans)}
+.menu-head p{color:var(--muted);margin-top:14px}
+.menu-col{max-width:620px;margin:0 auto}
+.menu-group + .menu-group{margin-top:clamp(40px,5vw,56px);padding-top:clamp(36px,4.5vw,48px);border-top:1px solid var(--line)}
+.menu-group h3{font-family:var(--serif);font-style:italic;font-weight:500;font-size:1.5rem;color:var(--accent);margin-bottom:22px}
+.dish{display:flex;justify-content:space-between;gap:18px;align-items:baseline}
+.dish + .dish{margin-top:20px}
+.dish h4{font-size:1.08rem;font-weight:600;letter-spacing:.005em}
+.dish .desc{color:var(--muted);font-size:.95rem;font-weight:400;margin-top:2px}
+.dish .px{font-weight:600;color:var(--ink);font-size:1.02rem;flex:none}
+.menu-note{text-align:center;color:var(--muted);font-size:.92rem;margin-top:clamp(36px,5vw,52px)}
+
+/* ---------- dish strip ---------- */
+.strip{padding:0}
+.strip-grid{display:grid;grid-template-columns:1fr 1.4fr 1fr;gap:14px}
+.strip-grid img{width:100%;height:440px;object-fit:cover}
+.strip-grid img:nth-child(1){margin-top:56px;height:384px}
+.strip-grid img:nth-child(3){margin-top:32px;height:408px}
+
+/* ---------- kitchen ---------- */
+.kitchen-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(36px,6vw,88px);align-items:center}
+.kitchen-grid img{width:100%;aspect-ratio:4/4.4;object-fit:cover}
+.kitchen p{color:var(--muted);margin-top:18px;font-size:1.06rem;max-width:32rem}
+.kitchen .sig{margin-top:26px;font-family:var(--serif);font-style:italic;font-size:1.2rem;color:var(--ink)}
+.kitchen .sig small{display:block;font-family:var(--sans);font-style:normal;font-size:.9rem;color:var(--muted);margin-top:4px}
+
+/* ---------- private ---------- */
+.private{position:relative;overflow:hidden}
+.private-bg{position:absolute;inset:0}
+.private-bg img{width:100%;height:100%;object-fit:cover}
+.private-bg::after{content:"";position:absolute;inset:0;background:rgba(20,17,16,.82)}
+.private .wrap{position:relative;z-index:1;text-align:center;max-width:40rem}
+.private p{color:var(--ink);opacity:.85;margin:16px auto 30px;max-width:32rem}
+
+/* ---------- visit ---------- */
+.visit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,4vw,48px);margin-top:clamp(32px,5vw,52px)}
+.visit-col strong{display:block;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;font-weight:700}
+.visit-col p{font-size:1.04rem;line-height:1.8}
+.visit-col a{color:var(--accent-bright);text-decoration:none;font-weight:600}
+.visit-col a:hover{text-decoration:underline}
+.visit .btn{margin-top:36px}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--line);padding:44px 0 36px;font-size:.93rem;color:var(--muted)}
+.foot-row{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center}
+.foot-row .brand{font-size:1.15rem}
+.foot-note{width:100%;margin-top:24px;padding-top:20px;border-top:1px solid var(--line);font-size:.85rem;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+footer a{color:var(--accent-bright);text-decoration:none;font-weight:600}
+
+/* ---------- reveal ---------- */
+@media (prefers-reduced-motion:no-preference){
+  .rv{opacity:0;transform:translateY(22px)}
+  .rv.in{opacity:1;transform:none;transition:opacity .75s cubic-bezier(.16,1,.3,1),transform .75s cubic-bezier(.16,1,.3,1)}
+}
+
+/* ---------- mobile ---------- */
+@media(max-width:940px){
+  .story-grid,.kitchen-grid{grid-template-columns:1fr}
+  .story-grid img{order:-1}
+  .strip-grid{grid-template-columns:1fr;gap:12px}
+  .strip-grid img,.strip-grid img:nth-child(1),.strip-grid img:nth-child(3){margin-top:0;height:300px}
+  .visit-grid{grid-template-columns:1fr;gap:28px}
+}
+@media(max-width:860px){
+  .nav-links{
+    display:none;position:absolute;top:78px;left:0;right:0;
+    background:var(--bg);border-bottom:1px solid var(--line);
+    flex-direction:column;padding:22px 24px;gap:18px;align-items:flex-start;
+  }
+  .nav-links.open{display:flex}
+  .menu-btn{display:block}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Copper and Oak home">Copper <em>&amp;</em> Oak</a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="navlinks">Menu</button>
+    <nav class="nav-links" id="navlinks">
+      <a href="#menu">Menu</a>
+      <a href="#kitchen">The kitchen</a>
+      <a href="#private">Private dining</a>
+      <a href="#visit">Visit</a>
+      <a class="btn" href="tel:+19515550186">Reserve a table</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero" aria-label="Introduction">
+    <div class="hero-bg">
+      <img src="assets/hero.jpg" alt="Plated seasonal dish on a candlelit table with wine" width="1920" height="1280" fetchpriority="high">
+    </div>
+    <div class="wrap hero-inner">
+      <h1>Wood-fired cooking, five nights a week.</h1>
+      <p>A neighborhood dining room in Riverside with a short seasonal menu, a long wine list, and seats at the counter.</p>
+      <div class="hero-ctas">
+        <a class="btn" href="tel:+19515550186">Reserve a table</a>
+        <a class="btn btn-ghost" href="#menu">View the menu</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="story">
+    <div class="wrap story-grid">
+      <div class="rv">
+        <h2>Forty-two seats and a hearth</h2>
+        <p>Everything that leaves this kitchen touches the wood fire: oak for the steaks, fruit woods for fish and vegetables. The menu changes when the farmers market does, which is roughly every three weeks.</p>
+        <p>Half the room is bookable. The other half, including the counter in front of the hearth, is kept for walk-ins.</p>
+      </div>
+      <img class="rv" src="assets/interior.jpg" alt="Dark wood dining room with brass screens and leather banquettes" width="1600" height="1067" loading="lazy">
+    </div>
+  </section>
+
+  <section class="menu" id="menu">
+    <div class="wrap">
+      <div class="menu-head rv">
+        <span class="kicker">Dinner, Wednesday to Sunday</span>
+        <h2>The menu right now</h2>
+        <p>A sample from this month. The full menu is on paper, and it changes with the market.</p>
+      </div>
+      <div class="menu-col">
+        <div class="menu-group rv">
+          <h3>To start</h3>
+          <div class="dish"><div><h4>Charred leeks</h4><p class="desc">romesco, toasted hazelnut</p></div><span class="px">14</span></div>
+          <div class="dish"><div><h4>Burrata</h4><p class="desc">grilled peach, basil oil, sourdough</p></div><span class="px">16</span></div>
+          <div class="dish"><div><h4>Beef tartare</h4><p class="desc">smoked egg yolk, rye crisp</p></div><span class="px">19</span></div>
+        </div>
+        <div class="menu-group rv">
+          <h3>From the hearth</h3>
+          <div class="dish"><div><h4>King salmon</h4><p class="desc">cucumber salsa verde, brown butter</p></div><span class="px">34</span></div>
+          <div class="dish"><div><h4>Hanger steak</h4><p class="desc">twice-cooked frites, green peppercorn</p></div><span class="px">38</span></div>
+          <div class="dish"><div><h4>Cider-glazed pork ribs</h4><p class="desc">house pickles, burnt-end beans</p></div><span class="px">33</span></div>
+          <div class="dish"><div><h4>Half chicken</h4><p class="desc">charred lemon, pan drippings</p></div><span class="px">29</span></div>
+        </div>
+        <div class="menu-group rv">
+          <h3>To finish</h3>
+          <div class="dish"><div><h4>Basque cheesecake</h4><p class="desc">muscat, lemon thyme</p></div><span class="px">12</span></div>
+          <div class="dish"><div><h4>Chocolate tart</h4><p class="desc">olive oil, flaked salt</p></div><span class="px">12</span></div>
+        </div>
+      </div>
+      <p class="menu-note rv">Corkage $25, waived with a bottle from our list. Please tell us about allergies when you book.</p>
+    </div>
+  </section>
+
+  <section class="strip" aria-label="Dishes from the kitchen">
+    <div class="strip-grid">
+      <img src="assets/dish-salmon.jpg" alt="Seared salmon over greens with cucumber relish and red wine" width="1200" height="1800" loading="lazy">
+      <img src="assets/dish-steak.jpg" alt="Hanger steak with herbed frites on a white plate" width="1200" height="800" loading="lazy">
+      <img src="assets/dish-ribs.jpg" alt="Glazed pork ribs on a board with tomatoes and pickles" width="1200" height="800" loading="lazy">
+    </div>
+  </section>
+
+  <section id="kitchen">
+    <div class="wrap kitchen-grid">
+      <div class="kitchen rv">
+        <h2>The kitchen</h2>
+        <p>Chef Marisol Vega cooked eight years at hearth-driven rooms in Los Angeles before coming home to Riverside to open her own. The brigade is small, the prep list is long, and nothing is finished anywhere but over the fire.</p>
+        <p class="sig">"Short menus keep us honest. If it's on the page, it's because it's good this week."<small>Marisol Vega, chef and owner</small></p>
+      </div>
+      <img class="rv" src="assets/chef.jpg" alt="Chef plating greens across a row of dishes at the pass" width="1200" height="800" loading="lazy">
+    </div>
+  </section>
+
+  <section class="private" id="private">
+    <div class="private-bg">
+      <img src="assets/prep.jpg" alt="Cook slicing vegetables on a prep board" width="1200" height="1800" loading="lazy">
+    </div>
+    <div class="wrap rv">
+      <h2>Private dining for 12 to 40</h2>
+      <p>The back room seats twelve at one table. Buy out the whole floor for forty. Set menus, wine pairings, and one point of contact who answers the same day.</p>
+      <a class="btn" href="mailto:events@copperandoak.demo">Ask about private dining</a>
+    </div>
+  </section>
+
+  <section id="visit">
+    <div class="wrap">
+      <h2 class="rv">Visit</h2>
+      <div class="visit-grid">
+        <div class="visit-col rv">
+          <strong>Hours</strong>
+          <p>Wednesday to Sunday<br>5pm to 10pm<br>Counter opens at 4:30pm</p>
+        </div>
+        <div class="visit-col rv">
+          <strong>Find us</strong>
+          <p>3684 Hearthstone Ave<br>Riverside, California<br>City lot behind the building</p>
+        </div>
+        <div class="visit-col rv">
+          <strong>Reserve</strong>
+          <p>Call <a href="tel:+19515550186">(951) 555-0186</a><br>Parties of 7+, email <a href="mailto:events@copperandoak.demo">events@copperandoak.demo</a></p>
+        </div>
+      </div>
+      <a class="btn rv" href="tel:+19515550186">Reserve a table</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-row">
+    <span class="brand">Copper <em style="color:var(--accent)">&amp;</em> Oak</span>
+    <span>3684 Hearthstone Ave, Riverside · Wednesday to Sunday</span>
+    <div class="foot-note">
+      <span>Fictional business shown for demonstration.</span>
+      <span>Website concept by <a href="../../index.html">Studio 72</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.querySelector('.menu-btn'),links=document.getElementById('navlinks');
+  btn.addEventListener('click',function(){
+    var open=links.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open);
+  });
+  links.addEventListener('click',function(e){if(e.target.tagName==='A'){links.classList.remove('open');btn.setAttribute('aria-expanded','false');}});
+
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
+    },{threshold:.15,rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+  }else{
+    document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in');});
+  }
+})();
+</script>
+</body>
+</html>
