@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studio 72 | Start your project</title>
+<meta name="description" content="Tell Studio 72 about your business. Two minutes now, a 30-minute call this week, and your website can be live before the weekend.">
+<meta property="og:title" content="Studio 72 | Start your project">
+<meta property="og:description" content="Two minutes of form, a 30-minute call, live in 72 hours.">
+<meta property="og:url" content="https://studio72web.com/contact.html">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232743d0'/%3E%3Ctext x='16' y='21.5' font-family='system-ui' font-size='13' font-weight='700' fill='white' text-anchor='middle'%3E72%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.start{padding:clamp(60px,8vw,96px) 0 clamp(72px,9vw,110px)}
+.start-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(40px,6vw,84px);align-items:start}
+.start-left h1{font-size:clamp(2.2rem,5vw,3.4rem)}
+.start-left .lede{margin-top:18px;max-width:27rem}
+.next{margin-top:34px;padding-top:8px}
+.next li{list-style:none;display:grid;grid-template-columns:34px 1fr;gap:14px;padding:14px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.99rem;align-items:start}
+.next li b{color:var(--text)}
+.next .dot{width:28px;height:28px;border-radius:50%;background:var(--cream-deep);border:1px solid var(--line);display:grid;place-items:center;font-weight:700;font-size:.82rem;font-family:var(--display)}
+.alt{margin-top:30px;padding-top:24px;border-top:1px solid var(--line);font-size:1rem;color:var(--muted)}
+.alt a{color:var(--cobalt-deep);font-weight:600}
+@media(max-width:980px){.start-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="index.html"><span class="mark">72</span>Studio 72</a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="navlinks">Menu</button>
+    <nav class="nav-links" id="navlinks">
+      <a href="work.html">Work</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+      <a class="btn" href="contact.html#form">Start your project</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="start">
+    <div class="wrap start-grid">
+      <div class="start-left">
+        <h1 class="rv in">Tell us about your business</h1>
+        <p class="lede rv in d1">Two minutes now, a 30-minute call this week, and your site can be live before the weekend. No payment until you approve the written scope.</p>
+        <ul class="next rv in d2">
+          <li><span class="dot">1</span><span><b>You send this form.</b> Anything you know is enough; blank fields are fine.</span></li>
+          <li><span class="dot">2</span><span><b>We reply within one business day</b> with a couple of call times.</span></li>
+          <li><span class="dot">3</span><span><b>After the call, you get a written scope and price.</b> Approve it, and the 72-hour clock starts.</span></li>
+        </ul>
+        <div class="alt rv in d3">
+          Prefer email? Write to <a href="mailto:gshaghoyan00@gmail.com">gshaghoyan00@gmail.com</a> and we reply the same day.
+        </div>
+      </div>
+      <form class="form-card rv in d1" id="form" data-lead action="https://formsubmit.co/gshaghoyan00@gmail.com" method="POST" novalidate>
+        <input type="hidden" name="_subject" value="New Studio 72 lead">
+        <input type="hidden" name="_next" value="https://studio72web.com/thanks.html">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <div class="row2">
+          <div class="field">
+            <label for="s-name">Your name</label>
+            <input id="s-name" name="name" type="text" autocomplete="name" required>
+            <p class="err">Please add your name.</p>
+          </div>
+          <div class="field">
+            <label for="s-biz">Business name</label>
+            <input id="s-biz" name="business" type="text" autocomplete="organization">
+          </div>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label for="s-email">Email</label>
+            <input id="s-email" name="email" type="email" autocomplete="email" required>
+            <p class="err">Please add an email so we can reply.</p>
+          </div>
+          <div class="field">
+            <label for="s-phone">Phone</label>
+            <input id="s-phone" name="phone" type="tel" autocomplete="tel">
+          </div>
+        </div>
+        <div class="field">
+          <label for="s-need">What do you need?</label>
+          <select id="s-need" name="need">
+            <option>Landing page ($500)</option>
+            <option selected>Full site ($750)</option>
+            <option>Site + brand ($1,200)</option>
+            <option>Not sure yet, let's talk</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="s-notes">Tell us about the business</label>
+          <textarea id="s-notes" name="notes" placeholder="What you do, where you are, and what the site needs to accomplish."></textarea>
+        </div>
+        <button class="btn" type="submit" style="width:100%">Start your project</button>
+        <p class="form-note">We use what you send only to reply. <a href="privacy.html">Privacy policy</a></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="index.html"><span class="mark">72</span>Studio 72</a>
+      <nav>
+        <a href="work.html">Work</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="mailto:gshaghoyan00@gmail.com">gshaghoyan00@gmail.com</a>
+      </nav>
+    </div>
+    <p class="foot-base">© 2026 Studio 72. Websites for local businesses, live in 72 hours.</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

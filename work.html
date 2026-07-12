@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studio 72 | The work</title>
+<meta name="description" content="Three complete website builds by Studio 72: a roofing contractor, a skin studio, and a restaurant. Real copy, real photography, working forms.">
+<meta property="og:title" content="Studio 72 | The work">
+<meta property="og:description" content="Three complete builds touring live: contractor, spa, restaurant. This is the standard every client gets.">
+<meta property="og:url" content="https://studio72web.com/work.html">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232743d0'/%3E%3Ctext x='16' y='21.5' font-family='system-ui' font-size='13' font-weight='700' fill='white' text-anchor='middle'%3E72%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.page-head{padding:clamp(60px,8vw,96px) 0 clamp(36px,5vw,56px)}
+.page-head h1{font-size:clamp(2.4rem,5.4vw,3.9rem);max-width:16ch}
+.case{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:clamp(30px,4.5vw,60px);align-items:center;scroll-margin-top:96px}
+.case + .case{margin-top:clamp(72px,9vw,112px)}
+.case.flip{grid-template-columns:minmax(0,4fr) minmax(0,7fr)}
+.case.flip .case-info{order:-1}
+.case-info .chip{margin-bottom:16px}
+.case-info h2{font-size:1.9rem;margin-bottom:12px}
+.case-info p{color:var(--m-on-cobalt);font-size:1.03rem}
+.case-info ul{margin:18px 0 22px}
+.case-info li{list-style:none;padding:9px 0;border-top:1px solid rgba(255,255,255,.25);font-size:.98rem;color:#fff}
+.case-info .case-note{font-size:.85rem;color:var(--m-on-cobalt);margin-top:14px}
+@media(max-width:980px){
+  .case,.case.flip{grid-template-columns:1fr}
+  .case.flip .case-info{order:0}
+}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="index.html"><span class="mark">72</span>Studio 72</a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="navlinks">Menu</button>
+    <nav class="nav-links" id="navlinks">
+      <a href="work.html" aria-current="page">Work</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn" href="contact.html">Start your project</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <div class="wrap page-head">
+    <h1 class="rv in">Complete builds, touring live.</h1>
+    <p class="lede rv in d1">Each panel below is a photograph of the entire finished site, scrolling top to bottom. Open any of them and click around for real. The businesses are fictional; the craft is the product.</p>
+  </div>
+
+  <section class="on-cobalt" style="padding-top:clamp(56px,7vw,84px)">
+    <div class="wrap">
+
+      <article class="case rv" id="roofing">
+        <div class="frame">
+          <div class="frame-bar"><span class="frame-url">summitroofing.example</span></div>
+          <div class="tour"><img src="assets/tours/tour-roofing.jpg" alt="Full scrolling view of the Summit Roofing concept website" width="880" height="3711"></div>
+        </div>
+        <div class="case-info">
+          <span class="chip">Contractors &amp; trades</span>
+          <h2>Summit Roofing</h2>
+          <p>Built to turn a storm-season search into a booked inspection.</p>
+          <ul>
+            <li>Quote form and tap-to-call on every screen</li>
+            <li>License, warranty, and insurance up front</li>
+            <li>Project gallery that reads like proof</li>
+          </ul>
+          <a class="arrow-link" href="demos/summit-roofing/index.html" target="_blank" rel="noopener">Open the full site <span class="ar">&rarr;</span></a>
+          <p class="case-note">Concept build. The business is fictional.</p>
+        </div>
+      </article>
+
+      <article class="case flip rv" id="spa">
+        <div class="frame">
+          <div class="frame-bar"><span class="frame-url">velaskin.example</span></div>
+          <div class="tour"><img src="assets/tours/tour-spa.jpg" alt="Full scrolling view of the Véla Skin Studio concept website" width="880" height="2993" loading="lazy"></div>
+        </div>
+        <div class="case-info">
+          <span class="chip">Spas &amp; salons</span>
+          <h2>Véla Skin Studio</h2>
+          <p>For businesses that sell calm, the website has to feel like the room.</p>
+          <ul>
+            <li>Service menu with plain pricing</li>
+            <li>Booking by call, text, or email</li>
+            <li>Hours and parking answered before anyone calls</li>
+          </ul>
+          <a class="arrow-link" href="demos/vela-skin/index.html" target="_blank" rel="noopener">Open the full site <span class="ar">&rarr;</span></a>
+          <p class="case-note">Concept build. The business is fictional.</p>
+        </div>
+      </article>
+
+      <article class="case rv" id="restaurant">
+        <div class="frame">
+          <div class="frame-bar"><span class="frame-url">copperandoak.example</span></div>
+          <div class="tour"><img src="assets/tours/tour-restaurant.jpg" alt="Full scrolling view of the Copper and Oak concept website" width="880" height="3789" loading="lazy"></div>
+        </div>
+        <div class="case-info">
+          <span class="chip">Restaurants</span>
+          <h2>Copper &amp; Oak</h2>
+          <p>Menu, hours, reservations, private dining. The four things every diner checks, answered beautifully.</p>
+          <ul>
+            <li>Seasonal menu laid out like print</li>
+            <li>Reservations by phone, parties by email</li>
+            <li>Dark, appetite-first photography</li>
+          </ul>
+          <a class="arrow-link" href="demos/copper-oak/index.html" target="_blank" rel="noopener">Open the full site <span class="ar">&rarr;</span></a>
+          <p class="case-note">Concept build. The business is fictional.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap grid">
+      <div class="rv">
+        <h2>Yours would be the fourth.</h2>
+        <p class="lede">Same craft, your business, live in 72 hours from your brief.</p>
+      </div>
+      <a class="btn rv" href="contact.html">Start your project</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="index.html"><span class="mark">72</span>Studio 72</a>
+      <nav>
+        <a href="work.html">Work</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="mailto:gshaghoyan00@gmail.com">gshaghoyan00@gmail.com</a>
+      </nav>
+    </div>
+    <p class="foot-base">© 2026 Studio 72. Websites for local businesses, live in 72 hours.</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
